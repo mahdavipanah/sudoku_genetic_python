@@ -253,7 +253,7 @@ def solve(problem_grid, population_size=1000, selection_rate=0.5, max_generation
         row_duplicates_count = 0
 
         # calculate rows duplicates
-        for a, b in same_row_indexes(problem_grid, 0, 0, N):
+        for a, b in same_column_indexes(problem_grid, 0, 0, N):
             row = list(get_cells_from_indexes(grid, same_row_indexes(problem_grid, a, b, N)))
 
             row_duplicates_count += len(row) - len(set(row))
